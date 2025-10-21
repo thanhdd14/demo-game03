@@ -1,0 +1,249 @@
+@use "vars" as *;
+
+
+.mv-video{
+	video{
+		width: 100%;
+	}
+}
+
+.sec-content{
+	min-height: 100vh;
+	margin: vw(-325) 0 0;
+	padding-bottom: vw(100);
+	&:before{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: url("../img/bg.png")no-repeat;
+		background-size: 100% ;
+		background-position: top center;
+	}
+}
+
+.content-nav{
+	position: relative;
+	width: vw(1353);
+	height: vw(300);
+	margin: 0 auto;
+	background: url("../img/bg-nav.png")no-repeat;
+	background-size: 100%;
+	@include smooth-transition;
+	&:hover{
+		background: url("../img/bg-nav-hv.png")no-repeat;
+		background-size: 100%;
+	}
+	&__menu{
+		@include flex(center,center,wrap);
+		position: absolute;
+		top: vw(140);
+		left: 0;
+		right: 0;
+		&-item{
+			width: vw(233);
+			height: vw(71);
+			a{
+				display: block;
+				height: 100%;
+			}
+			&:nth-child(1){
+				margin-right: vw(-25);
+			}
+			&:nth-child(3){
+				width: vw(386);
+				height: vw(78);
+				margin: 0 vw(-29);
+				position: relative;
+				z-index: 2;
+			}
+			&:last-child{
+				margin-left: vw(-25);
+			}
+		}
+	}
+}
+
+.content-show{
+	width: 100%;
+	max-width: vw(1167);
+	margin: 0 auto;
+	border: 1px solid #b0644d;
+	background: #852536;
+	padding: 13px;
+	position: relative;
+	&:before,&:after{
+		content: "";
+		height: vw(10);
+		background: url("../img/bf.png")no-repeat;
+		background-size: 100%;
+		position: absolute;
+		left: vw(-7);
+		right: vw(-7);
+	}
+	&:before{
+		top: -1px;
+	}
+	&:after{
+		bottom: -1px;
+	}
+	&__block{
+		background: #ede7cd;
+		position: relative;
+		padding: vw(100) vw(40);
+		font-size: vw(18);
+		line-height: 1.8;
+		&:before{
+			content: "";
+			width: vw(42);
+			height: vw(26);
+			background: url("../img/bf-02.png")no-repeat;
+			background-size: 100%;
+			position: absolute;
+			top: vw(-6);
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			z-index: 1;
+		}
+		&:after{
+			content: "";
+			position: absolute;
+			top: vw(6);
+			left: vw(6);
+			right: vw(6);
+			bottom: vw(6);
+			border: 1px solid #dbab4d;
+		}
+		&-custom{
+			position: relative;
+			z-index: 2;
+		}
+		.c-btn__back{
+			position: absolute;
+			top: vw(40);
+			left: vw(40);
+			z-index: 2;
+		}
+		&-ttl{
+			display: block;
+			text-align: center;
+			margin-bottom: vw(40);
+			img{
+				width: vw(449);
+				display: block;
+				margin: 0 auto;
+			}
+		}
+
+	}
+	&__article{
+		&-heading{
+			font-style: italic;
+			font-weight: bold;
+			color: #5e6464;
+			p{
+				padding: 0 !important;
+			}
+		}
+		h3{
+			display: block;
+			position: relative;
+			font-weight: bold;
+			font-size: vw(25);
+			color: #559677;
+			padding: 0 0 0 vw(70);
+			margin-bottom: vw(40);
+			@include mq(){
+				font-size: vwsp(25);
+				padding: 0 0 0 vwsp(70);
+				margin-bottom: vwsp(40);
+			}
+			&:before{
+				content: "";
+				width: vw(54);
+				height: vw(56);
+				background: url("../img/icon-ttl.png")no-repeat;
+				background-size: 100%;
+				position: absolute;
+				@include v-align;
+				left: 0;
+				@include mq(){
+					width: vwsp(54);
+					height: vwsp(56);
+				}
+			}
+		}
+		h4{
+			display: block;
+			position: relative;
+			font-size: vw(22);
+			font-weight: bold;
+			color: #5e6464;
+			padding: 0 0 0 vw(80);
+			margin-bottom: vw(25);
+			@include mq(){
+				font-size: vwsp(25);
+				padding: 0 0 0 vwsp(80);
+				margin-bottom: vwsp(25);
+			}
+			&:before{
+				content: "";
+				width: vw(37);
+				height: vw(43);
+				background: url("../img/icon-ttl-02.png")no-repeat;
+				background-size: 100%;
+				position: absolute;
+				@include v-align;
+				left: vw(25);
+				@include mq(){
+					width: vwsp(37);
+					height: vwsp(43);
+					left: vwsp(25);
+				}
+			}
+		}
+		ul{
+			padding: 0 0 0 vw(80);
+			margin-bottom: vw(50);
+			@include mq(){
+				padding: 0 0 0 9vw;
+				margin-bottom: vwsp(50);
+
+			}
+			li{
+				position: relative;
+				padding: 0 0 0 vw(20);
+				@include mq(){
+					padding: 0 0 0 vwsp(20);
+					margin-bottom: vwsp(40);
+				}
+				&:before{
+					content: "";
+					width: vw(11);
+					height: vw(11);
+					background: url("../img/dos-03.png")no-repeat;
+					background-size: 100%;
+					position: absolute;
+					top: vw(8);
+					left: 0;
+					@include mq(){
+						width: vwsp(11);
+						height: vwsp(11);
+						top: 2vw;
+					}
+				}
+			}
+		}
+		p{
+			padding: 0 0 0 vw(100);
+			margin-bottom: vw(40);
+			@include mq(){
+				padding: 0 0 0 12vw;
+				margin-bottom: vwsp(50);
+			}
+		}
+	}
+}
