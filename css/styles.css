@@ -2258,7 +2258,7 @@ Component
 @media screen and (max-width: 768px) {
   #header .header-nav__menu-item a {
     display: block;
-    width: 210px;
+    width: 130px;
     margin: 0 auto;
   }
 }
