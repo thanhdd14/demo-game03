@@ -68,6 +68,9 @@ Component
 		display: inline-block;
 		position: relative;
 		width: vw(137);
+		@include mq(){
+			width: vwsp(137);
+		}
 	}
 	&__img{
 		position: relative;

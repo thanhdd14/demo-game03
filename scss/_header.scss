@@ -24,6 +24,7 @@
 		margin: 0 auto;
 		@include mq(){
 			max-width: vwsp(274);
+			right: auto;
 		}
 	}
 	.header-nav{
@@ -45,7 +46,7 @@
 			z-index: 999;
 		}
 		&__logo{
-			margin-bottom: 3vw;
+			margin-bottom: 30px;
 			img{
 				display: block;
 				width: vwsp(328);
@@ -64,7 +65,7 @@
 			&-item{
 				padding: 0 vw(5);
 				@include mq(){
-					margin-bottom: 3vw;
+					margin-bottom: vwsp(20);
 				}
 				a{
 					@include mq(md-min){
@@ -72,24 +73,9 @@
 						width: vw(137);
 					}
 					@include mq(){
-						@include flex(center,center,wrap);
-						width: vwsp(337);
-						height: vwsp(83);
-						background: url("../img/bg-item-menu.png")no-repeat;
-						background-size: 100%;
-						font-size: vwsp(25);
-						color: white;
-						font-weight: bold;
+						display: block;
+						width: 210px;
 						margin: 0 auto;
-						text-transform: uppercase;
-						line-height: 1.2;
-						align-content: center;
-						span{
-							display: block;
-							text-align: center;
-							width: 100%;
-							color: #e2ded3;
-						}
 					}
 				}
 				&:nth-child(1){
